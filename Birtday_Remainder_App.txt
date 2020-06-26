@@ -1,0 +1,55 @@
+
+                             *********How to Build a Simple Python Reminder App*********
+
+
+
+The algorithm:
+
+1:Ask user what it wants to be reminded about
+2:Ask when (in what amount of time, in minutes)
+3:Calculate timeout (minutes multiply by seconds)
+4:Wait for the specified time
+5:Remind of what I requested in step 1
+
+
+Now Starting By Step-By-Step Process:-
+
+1:-Setting things up::
+     =import time
+      #Import tells Python to load a module with the tools that I need for the task. Time is the name of the module. From that module, I’ll need a method called ‘sleep’ that I’ll use to pause the program for a set amount of time.
+2:-Asking for reminder::
+     =reminder = user.ask("What shall I remind you about?")
+      #I need to ask the user and get a response. In a perfect world, I’d want a code like this
+     =print("What shall I remind you about?")
+      #Print sends out a text message into Python’s default output (which in our case is command line).
+     =text = str(input())
+      #Take whatever the user has written, think of it as text, and put it into memory under the name “text”. Input() reads whatever the user inputs. Str() turns whatever had been input into text. Equals means “put one thing into memory with such name.”
+3:-Asking for time::
+     =print("In how many minutes?")
+     =local_time = float(input())
+      #The second line means: Take whatever user typed, think of it as a number, put it in memory under the name “local_time”.
+4:-Calculate timeout::
+     =local_time = local_time * 60
+      #This reads: take whatever is in memory under the name “local_time”, multiply it by 60, and put it in memory under the name “local_time”.
+5:-Wait::
+     =time.sleep(local_time)
+      #This reads: From module “time,” take the method “sleep.” From memory, find a piece of data under the name “local_time.” Give that piece of data to “sleep” and see what happens.
+6:-Remind::
+     =print(text)
+      #This means: take whatever is in memory under ‘text’ and send it to output. 
+
+
+
+
+
+                                        """NOW THE ACTUAL CODE LOOK LIKE THIS"""
+
+
+                                           1>>import time
+                                           2>>print("What shall I remind you about?")
+                                           3>>text = str(input())
+                                           4>>print("In how many minutes?")
+                                           5>>local_time = float(input())
+                                           6>>local_time = local_time * 60
+                                           7>>time.sleep(local_time)
+                                           8>>print(text)
